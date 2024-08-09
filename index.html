@@ -192,86 +192,44 @@
     </div>
     </center>
   </section>
- <!-- <section id="contact" class="py-5 bg-secondary">
-    <div class="container">
-      <h2 class="text-center text-primary mb-5">Contact Me</h2>
-      <form id="contactForm" action="send_mail.php" method="POST">
-        <div class="row">
-          <div class="col-md-6 mb-4">
-            <div class="form-group">
-              <label for="name" class="text-primary">Name</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-              <div class="invalid-feedback">Please enter your name.</div>
-            </div>
-          </div>
-          <div class="col-md-6 mb-4">
-            <div class="form-group">
-              <label for="email" class="text-primary">Email</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
-              <div class="invalid-feedback">Please enter a valid email address.</div>
-            </div>
-          </div>
-          <div class="col-12 mb-4">
-            <div class="form-group">
-              <label for="message" class="text-primary">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-              <div class="invalid-feedback">Please enter your message.</div>
-            </div>
-          </div>
-          <div class="col-12 mb-4">
-            <button type="submit" class="btn btn-primary-custom">Send Message</button>
-          </div>
-        </div>
-      </form>
-      <div class="text-center">
-        <a href="https://www.linkedin.com/in/vamsi-krishna-7a740724b" target="_blank" class="mx-3 text-primary">
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-        <a href="mailto:krishnav9846@gmail.com" class="mx-3 text-primary">
-          <i class="fas fa-envelope fa-2x"></i>
-        </a>
-        <a href="https://github.com/Vamsi-Krishna-3108" target="_blank" class="mx-3 text-primary">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
-        <a href="" target="_blank" class="mx-3 text-primary">
-          <i class="fab fa-instagram fa-2x"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-  
--->
 <section id="contact" class="py-5 bg-secondary">
-  <div class="container">
-    <h2 class="text-center text-primary mb-5">Contact Me</h2>
-    <form id="contactForm">
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <div class="form-group">
-            <label for="name" class="text-primary">Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-            <div class="invalid-feedback">Please enter your name.</div>
-          </div>
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Contact Me</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form action="<form
+            action="https://formspree.io/f/xvgprryk"
+            method="POST"
+          >
+            <label>
+              Your email:
+              <input type="email" name="email">
+            </label>
+            <label>
+              Your message:
+              <textarea name="message"></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+          </form>" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            </form>
         </div>
-        <div class="col-md-6 mb-4">
-          <div class="form-group">
-            <label for="email" class="text-primary">Email</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
-            <div class="invalid-feedback">Please enter a valid email address.</div>
-          </div>
-        </div>
-        <div class="col-12 mb-4">
-          <div class="form-group">
-            <label for="message" class="text-primary">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-            <div class="invalid-feedback">Please enter your message.</div>
-          </div>
-        </div>
-        <div class="col-12 mb-4">
-          <button type="submit" class="btn btn-primary-custom">Send Message</button>
-        </div>
-      </div>
-    </form>
+    </div>
+    <br>
+    <br>
     <div class="text-center">
       <a href="https://www.linkedin.com/in/vamsi-krishna-7a740724b" target="_blank" class="mx-3 text-primary">
         <i class="fab fa-linkedin fa-2x"></i>
@@ -288,33 +246,6 @@
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-<script>
-  (function() {
-    emailjs.init('0LGLBSKd2IvxcY_1w');
-  })();
-
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    var templateParams = {
-      name: document.getElementById('name').value,
-      email: document.getElementById('email').value,
-      message: document.getElementById('message').value
-    };
-
-    emailjs.send('service_cw1cbbt', 'template_xs1gjgv', templateParams)
-      .then(function(response) {
-        alert('Message sent successfully!', response.status, response.text);
-      }, function(error) {
-        alert('Failed to send message. Please try again later.', error);
-      });
-
-    this.reset();
-  });
-</script>
-  
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
