@@ -93,6 +93,7 @@ body{
 .btn-primary-custom {
   background-color: #1A5319;
   border-color: #1A5319;
+  color: white;
 }
 
 .btn-primary-custom:hover {
